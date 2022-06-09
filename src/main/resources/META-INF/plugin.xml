@@ -1,0 +1,27 @@
+<idea-plugin>
+  <id>com.ljp.PluginTest</id>
+
+  <name>PluginTest</name>
+
+  <vendor email="ljpen@sohu.com" url="https://www.ljpwy.com">ljp</vendor>
+
+
+  <description><![CDATA[
+      这是一款可以帮助程序在阅读代码是添加笔记,并将笔记生成文档的插件。<br>
+      <em>MarkDown文档</em>
+    ]]></description>
+
+
+  <depends>com.intellij.modules.platform</depends>
+  <actions>
+    <action id="PopApplicationId" class="com.ljp.plugintest.action.MyAction" text="addNote"
+            description="用于添加笔记">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+    </action>
+  </actions>
+  <extensions defaultExtensionNs="com.intellij">
+    <toolWindow factoryClass="com.ljp.plugintest.window.MyWindowFactory" id="noteWindow" anchor="right" icon="/META-INF/notebook.svg">
+    </toolWindow>
+  </extensions>
+
+</idea-plugin>
